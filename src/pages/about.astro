@@ -1,3 +1,7 @@
+---
+const skills = ["Python", "C#", "WPF", "Arduino", "HTML", "CSS", "JavaScript", "GitHub"]
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -16,5 +20,11 @@
             Excepturi illo placeat cum odit ipsa cumque explicabo iusto. 
             Quas quaerat nemo dolorem enim.
         </p>
+        <h2>Mis habilidades</h2>
+        <ul>
+            {skills.map(skill => (
+                <li>{skill}</li>
+            ))}
+        </ul>
 	</body>
 </html>
