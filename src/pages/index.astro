@@ -1,5 +1,6 @@
 ---
-const pageTitle = "Mi primera página con astro"
+import Navigation from '../components/Navigation.astro';
+const pageTitle = "Mi primera página con astro";
 ---
 
 <html lang="en">
@@ -11,8 +12,7 @@ const pageTitle = "Mi primera página con astro"
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Inicio</a>
-		<a href="/about/">Sobre mí</a>
+		<Navigation />
 		<h1>Primera página en Astro</h1>
 	</body>
 </html>

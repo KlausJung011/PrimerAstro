@@ -1,5 +1,8 @@
 ---
-const skills = ["Python", "C#", "WPF", "Arduino", "HTML", "CSS", "JavaScript", "GitHub"]
+import Navigation from '../components/Navigation.astro';
+import Description from '../components/Description.astro';
+import Social from '../components/Social.astro';
+const skills = ["Python", "C#", "WPF", "SQL", "Arduino", "HTML", "CSS", "JavaScript", "GitHub"]
 ---
 
 <html lang="en">
@@ -11,20 +14,23 @@ const skills = ["Python", "C#", "WPF", "Arduino", "HTML", "CSS", "JavaScript", "
 		<title>Astro</title>
 	</head>
 	<body>
-        <a href="/">Inicio</a>
-		<a href="/about/">Sobre mí</a>
+        <Navigation />
 		<h1>Mi sitio Astro</h1>
-        <h2>Sobre mí</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Eos laborum non animi temporibus nihil quo quidem. 
-            Excepturi illo placeat cum odit ipsa cumque explicabo iusto. 
-            Quas quaerat nemo dolorem enim.
-        </p>
+        <Description />
         <h2>Mis habilidades</h2>
         <ul>
             {skills.map(skill => (
                 <li>{skill}</li>
             ))}
+        </ul>
+        <h2>Redes Sociales</h2>
+        <ul>
+            <li>
+                <Social platform="github" username="KlausJung011"/>
+            </li>
+            <li>
+                <Social platform="facebook" username="KlausJung011"/>
+            </li>
         </ul>
 	</body>
 </html>
